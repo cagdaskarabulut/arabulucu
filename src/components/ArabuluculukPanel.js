@@ -5,14 +5,6 @@ import MyBreadcrumbs from "./tools/MyBreadcrumbs";
 
 export default function ArabuluculukPanel() {
 
-  useEffect(() => {
-    fetch("/api/auth/whoAmI/email")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
-  }, []);
-
   const LeftContent = () => {
     return (
       <>

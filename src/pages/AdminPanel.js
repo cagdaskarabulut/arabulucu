@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import MessageList from "../components/MessageList";
 import { useRouter } from "next/navigation";
+import { Button } from "@mui/material";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const AdminPanel = () => {
   const router = useRouter();
@@ -22,8 +24,10 @@ const AdminPanel = () => {
   return (
     <div>
       <h1>Hoşgeldin Öznur,</h1>
+      <Button style={{float:"right", marginTop:"10px"}} variant="contained" color="primary" onClick={() => signOut()}>Sign out</Button>
       <br />
       <h3>Mesaj Listesi</h3>
+      
       <MessageList />
     </div>
   );
