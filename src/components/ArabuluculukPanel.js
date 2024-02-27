@@ -10,7 +10,6 @@ export default function ArabuluculukPanel() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        console.log(process.env.NEXT_PUBLIC_ADMIN_USER);
       });
   }, []);
 

@@ -2,7 +2,6 @@ import { sql } from '@vercel/postgres';
  
 export default async function handler(request, response) {
   try {
-    console.log(request.body.name);
     const name = request.body.name;
     const email = request.body.email;
     let phonenumber = request.body.phonenumber;
