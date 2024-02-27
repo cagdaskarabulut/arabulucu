@@ -1,0 +1,57 @@
+{
+  "name": "arabulucu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.433.0",
+    "@aws-sdk/s3-request-presigner": "^3.490.0",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@headlessui/react": "^1.7.17",
+    "@material-ui/core": "^4.12.4",
+    "@mui/base": "^5.0.0-beta.13",
+    "@mui/icons-material": "^5.15.11",
+    "@mui/material": "^5.15.11",
+    "@mui/styles": "^5.14.7",
+    "@rooks/use-window-size": "^4.11.2",
+    "@unicef/material-ui-currency-textfield": "^0.8.6",
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/postgres": "^0.5.1",
+    "analytics": "github:vercel/analytics",
+    "autoprefixer": "^10.4.17",
+    "cookie": "^0.6.0",
+    "gtag": "^1.0.1",
+    "headlessui": "^0.0.0",
+    "heroicons": "^2.0.18",
+    "next": "14.1.0",
+    "next-auth": "^4.24.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-input-mask": "^2.0.4",
+    "react-responsive-carousel": "^3.2.23",
+    "react-scroll": "^1.8.9",
+    "rooks": "^7.14.1",
+    "sass": "^1.71.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  }
+}

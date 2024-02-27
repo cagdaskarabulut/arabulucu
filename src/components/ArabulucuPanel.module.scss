@@ -1,0 +1,35 @@
+@import "../styles/mixins.scss";
+@import "../styles/colors.scss";
+@import "../styles/globals.scss";
+
+.profileImageContainer{
+  vertical-align: middle;
+  text-align: center;
+  top: 50%;
+    left: 50%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+  .profileImage {
+    border-radius:50%;
+    width: 50%;
+    height: auto;
+      @include tablet-or-less {
+        width: 75%;
+      }
+  }
+}
+
+.profileContentTitle {
+  margin-top: 0px !important;
+  text-align: left !important;
+  @include tablet-or-less {
+    text-align:center !important;
+  }
+  
+}
+.profileContentBody {
+  float: left !important;
+}
+
