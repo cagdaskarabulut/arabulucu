@@ -27,8 +27,8 @@ const AdminPanel = () => {
       <Button style={{float:"right", marginTop:"10px"}} variant="contained" color="primary" onClick={() => signOut()}>Sign out</Button>
       <br />
       <h3>Mesaj Listesi</h3>
-      
-      <MessageList />
+      {isAuthorizedUser && <MessageList />}
+      {!isAuthorizedUser && <h4>Yükleniyor...</h4>}
     </div>
   );
 };
