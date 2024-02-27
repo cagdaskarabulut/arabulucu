@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 const AdminPanel = () => {
   const router = useRouter();
   const [isAuthorizedUser, setIsAuthorizedUser] = useState(false);
-  
+
   useEffect(() => {
     fetch("/api/auth/whoAmI/email")
       .then((res) => res.json())
@@ -21,7 +21,7 @@ const AdminPanel = () => {
 
   return (
     <div>
-      <h1>Hoşgeldin Öznur, </h1>
+      <h1>Hoşgeldin Öznur,</h1>
       <br />
       <h3>Mesaj Listesi</h3>
       <MessageList />
