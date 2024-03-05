@@ -45,7 +45,7 @@ const MessageList = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.message_arabulucu.rows.map((item) => (
+          {data.arabulucu_message.rows.map((item) => (
               <TableRow
                 key={item.id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

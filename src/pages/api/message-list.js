@@ -1,7 +1,7 @@
 import { sql } from '@vercel/postgres';
  
 export default async function handler(request, response) {
-  const message_arabulucu = await sql`SELECT id, name, email, phonenumber, content, creationdate 
-	FROM message_arabulucu;`;
-  return response.status(200).json({ message_arabulucu });
+  const arabulucu_message = await sql`SELECT id, name, email, phonenumber, content, creationdate 
+	FROM arabulucu_message;`;
+  return response.status(200).json({ arabulucu_message });
 }
