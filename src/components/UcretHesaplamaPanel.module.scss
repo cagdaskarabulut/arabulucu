@@ -10,9 +10,31 @@
   font-weight: bold !important;
   width: 400px !important;
   text-align: center;
+
   @include desktop {
     width: 50% !important;
   }
+
+  @include tablet-or-less {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+.WarningStyle {
+  padding: 5px 0px 5px 5px !important;
+  border-color: red !important;
+  border-style: solid !important;
+  color: red !important;
+  font-weight: bold !important;
+  width: 400px !important;
+  text-align: center;
+  margin-bottom: 50px !important;
+
+  @include desktop {
+    width: 50% !important;
+  }
+
   @include tablet-or-less {
     width: 100% !important;
     margin-bottom: 30px !important;
@@ -33,7 +55,7 @@
   }
 }
 
-.tipMenuOnlyFont{
+.tipMenuOnlyFont {
   font-size: 14px !important;
   font-family: "Times New Roman" !important;
 }

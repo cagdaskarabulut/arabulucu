@@ -4,7 +4,6 @@ import React from "react";
 import { useRouter } from "next/router";
 
 export default function Menu() {
-
   const router = useRouter();
 
   return (
@@ -16,7 +15,7 @@ export default function Menu() {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-between !important" ,
+          justifyContent: "space-between !important",
           marginTop: 2,
           marginBottom: 2,
           marginLeft: 10,
@@ -27,30 +26,58 @@ export default function Menu() {
           },
         }}
       >
-        <Button href={"/"} 
-        className={(router.pathname == "/" || router.pathname == "/")  ? styles.menuButtonStyleSelected : styles.menuButtonStyle}
+        <Button
+          href={"/"}
+          className={
+            router.pathname == "/" || router.pathname == "/"
+              ? styles.menuButtonStyleSelected
+              : styles.menuButtonStyle
+          }
         >
           Arabuluculuk
         </Button>
-        <Button href={"/Sorular"} 
-        className={router.pathname == "/Sorular" ? styles.menuButtonStyleSelected : styles.menuButtonStyle}
+        <Button
+          href={"/Sorular"}
+          className={
+            router.pathname == "/Sorular"
+              ? styles.menuButtonStyleSelected
+              : styles.menuButtonStyle
+          }
         >
           Sık sorulanlar
         </Button>
-        <Button href={"/Hizmetler"} 
-        className={router.pathname == "/Hizmetler" ? styles.menuButtonStyleSelected : styles.menuButtonStyle}>
+        <Button
+          href={"/Hizmetler"}
+          className={
+            router.pathname == "/Hizmetler"
+              ? styles.menuButtonStyleSelected
+              : styles.menuButtonStyle
+          }
+        >
           Hizmetlerimiz
         </Button>
-        <Button href={"/Ucret-Hesaplama"} 
+        {/* <Button href={"/Ucret-Hesaplama"} 
         className={router.pathname == "/Ucret-Hesaplama" ? styles.menuButtonStyleSelected : styles.menuButtonStyle}>
           Ücret hesaplama
-        </Button>
-        <Button href={"/Arabulucu"} 
-        className={router.pathname == "/Arabulucu" ? styles.menuButtonStyleSelected : styles.menuButtonStyle}>
+        </Button> */}
+        <Button
+          href={"/Arabulucu"}
+          className={
+            router.pathname == "/Arabulucu"
+              ? styles.menuButtonStyleSelected
+              : styles.menuButtonStyle
+          }
+        >
           Ben kimim
         </Button>
-        <Button href={"/iletisim"} 
-        className={router.pathname == "/iletisim" ? styles.menuButtonStyleSelected : styles.menuButtonStyle}>
+        <Button
+          href={"/iletisim"}
+          className={
+            router.pathname == "/iletisim"
+              ? styles.menuButtonStyleSelected
+              : styles.menuButtonStyle
+          }
+        >
           İletişim
         </Button>
       </Box>

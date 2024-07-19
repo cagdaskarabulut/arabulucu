@@ -217,6 +217,16 @@ export default function UcretHesaplamaPanel() {
         activePageNumber="1"
       />
       <h2 className={styles.titleStyle}>Arabuluculuk Ücret Hesaplama</h2>
+      <Grid item xs={12}>
+        <br />
+        <br />
+        <MyResultMessage
+          isVisible
+          leftContent="Veriler 2023 Yılına aittir. 2024 verileri henüz güncellenmemiştir."
+          leftContentStyle={styles.WarningStyle}
+        />
+      </Grid>
+
       <Grid item xs={20} columns={12}>
         <Grid item xs={12}>
           <span style={{ fontWeight: "bold" }}>Uyuşmazlık Tipi</span>
