@@ -1,5 +1,4 @@
 import styles from "./FooterPanel.module.scss";
-import { Grid } from "@mui/material";
 import React from "react";
 import { useCallback, useContext, useEffect, useState } from "react";
 import useWindowSize from "@rooks/use-window-size";
@@ -43,12 +42,12 @@ const FooterPanel = () => {
       <>
         <div className={styles.footerContentStyle}>
           Bu sitede paylaşılan bilgiler yalnızca bilgilendirme amaçlı olup,
-          Türkiye Cumhuriyeti Barolar Birliği’nin ilgili düzenlemeleri
-          uyarınca reklam, teklif, hukuki öneri veya danışmanlık teşkil etmez.
-          Sitede sunulan bilgiler hakkında Arabulucu.info sitesi sorumluluk
-          kabul etmez. Bu sitede paylaşılan bilgiler, ve sair veriler
-          Arabulucu.info'a ait olup, büronun yazılı izni olmaksızın
-          kullananlar hakkında yasal işlem yapılır.
+          Türkiye Cumhuriyeti Barolar Birliği’nin ilgili düzenlemeleri uyarınca
+          reklam, teklif, hukuki öneri veya danışmanlık teşkil etmez. Sitede
+          sunulan bilgiler hakkında Arabulucu.info sitesi sorumluluk kabul
+          etmez. Bu sitede paylaşılan bilgiler, ve sair veriler Arabulucu.info'a
+          ait olup, büronun yazılı izni olmaksızın kullananlar hakkında yasal
+          işlem yapılır.
         </div>
       </>
     );
@@ -56,7 +55,11 @@ const FooterPanel = () => {
 
   return (
     <div className={styles.footerStyle}>
-      <MyGrid leftContent={<LeftContent />} rightContent={<RightContent />} contentPosition="center" />
+      <MyGrid
+        leftContent={<LeftContent />}
+        rightContent={<RightContent />}
+        contentPosition="center"
+      />
     </div>
   );
 };
