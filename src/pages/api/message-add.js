@@ -33,7 +33,7 @@ export default async function handler(request, response) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'cagdas.karabulut@gmail.com',
-      subject: 'Yeni İletişim Formu Mesajı',
+      subject: 'Arabulucu.info - Yeni İletişim Formu Mesajı',
       html: `
         <h3>Yeni İletişim Formu Mesajı</h3>
         <p><strong>İsim:</strong> ${name}</p>
