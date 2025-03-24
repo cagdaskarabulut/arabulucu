@@ -1,7 +1,6 @@
 # *
 User-agent: *
 Allow: /
-Disallow: /AdminPanel
 
 # Sitemaps
 Sitemap: https://www.arabulucu.info/sitemap.xml

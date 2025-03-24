@@ -20,7 +20,6 @@ const MessageForm = () => {
   const [isSentMessageOpen, setIsSentMessageOpen] = useState(false);
 
   const onSubmit = async () => {
-    // setSuccessMessage("");
     setIsRequiredFieldsError(false);
     if (
       message.name == "" ||
@@ -32,22 +31,31 @@ const MessageForm = () => {
       return;
     }
 
-    fetch("/api/message-add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: message.name,
-        email: message.email,
-        phonenumber: message.phonenumber,
-        content: message.content,
-      }),
-    }) //message
-      .then((res) => res.json())
-      .then((data) => {
-        setMessage({ name: "", email: "", phonenumber: "", content: "" });
-        // setSuccessMessage("Mesajınız başarıyla gönderildi");
-        setIsSentMessageOpen(true);
+    try {
+      const response = await fetch("/api/send-message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(message),
       });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setMessage({ name: "", email: "", phonenumber: "", content: "" });
+        setIsSentMessageOpen(true);
+      } else {
+        alert(
+          "Mesaj gönderilirken bir hata oluştu. Lütfen daha sonra tekrar deneyiniz."
+        );
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert(
+        "Mesaj gönderilirken bir hata oluştu. Lütfen daha sonra tekrar deneyiniz."
+      );
+    }
   };
 
   const validateEmail = (email) => {
