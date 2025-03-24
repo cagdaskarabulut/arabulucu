@@ -24,7 +24,14 @@ const AdminPanel = () => {
   return (
     <div>
       <h1>Hoşgeldin Öznur,</h1>
-      <Button style={{float:"right", marginTop:"10px"}} variant="contained" color="primary" onClick={() => signOut()}>Sign out</Button>
+      <Button
+        style={{ float: "right", marginTop: "10px" }}
+        variant="contained"
+        color="primary"
+        onClick={() => signOut()}
+      >
+        Sign out
+      </Button>
       <br />
       <h3>Mesaj Listesi</h3>
       {isAuthorizedUser && <MessageList />}
@@ -32,5 +39,4 @@ const AdminPanel = () => {
     </div>
   );
 };
-
 export default AdminPanel;
